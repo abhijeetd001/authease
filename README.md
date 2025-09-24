@@ -67,11 +67,23 @@ If script execution is blocked:
 - On match, loads "user" and navigates to Home.
 
 ### Logout
-- Clears user state and removes "user" from storage.
+- Clears user state and removes "user" from storage. (Intended to clear user state and remove "user" from AsyncStorage.
+This code is currently commented out to maintain session persistence during development/testing.)
+// Code
+// Clears user state and removes "user" from storage - temporarily disabled
+// setUser(null);
+// await AsyncStorage.removeItem(STORAGE_USER_KEY);
 - Returns to Login.
 
 ## Keys
 - STORAGE_USER_KEY: user
 - STORAGE_CREDENTIALS_KEY: credentials
 
-## Example: handleLogin (in LoginScreen)
+Screenshots
+Here are some screenshots showcasing the app:
+
+![Signup Screen] https://drive.google.com/file/d/1-GXYyriHkvMIGt8NDM2sYGG2-xtopFsT/view?usp=drive_link*
+
+![Login Screen] https://drive.google.com/file/d/1nAy9dL2ilc23heOPEWc5jGHQaVgKXlXE/view?usp=drive_link*
+
+![Home Screen] https://drive.google.com/file/d/1NC8ipEp_efQ9h71S5TMr29MD7SLfGxji/view?usp=drive_link*
